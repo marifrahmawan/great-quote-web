@@ -39,7 +39,7 @@ const useInput = (validationRule) => {
     dispatch({ type: 'RESET' });
   };
 
-  const inputIsValid = validationRule(inputState.value);
+  const inputIsValid = validationRule.test(inputState.value);
   const hasError = !inputIsValid && inputState.isClicked;
 
   return {

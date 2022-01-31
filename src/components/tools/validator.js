@@ -1,47 +1,58 @@
-export const onlyLetters = (value) => {
-  const regularExp = /^[A-Za-z _.-]+$/;
-
-  const validationResult = regularExp.test(value.trim());
-
-  return validationResult;
+const Validator = {
+  onlyLetters: /^[A-Za-z _.-]+$/,
+  onlyNumbers: /^[0-9]+$/,
+  onlyMixOfAlphaNumeric: /^([0-9]+[a-zA-Z]+|[a-zA-Z]+[0-9]+)[0-9a-zA-Z]*$/,
+  containsAlphaNumeric: /^(?!-)(?!.*-)[A-Za-z0-9- _.-]+(?<!-)$/,
+  containsNumber: /\d+/,
+  containsAlphabet: /[a-zA-Z]/,
 };
 
-export const onlyNumbers = (value) => {
-  const regularExp = /^[0-9]+$/;
+export default Validator;
 
-  const validationResult = regularExp.test(value.trim());
+// export const onlyLetters = (value) => {
+//   const regularExp = /^[A-Za-z _.-]+$/;
 
-  return validationResult;
-};
+//   const validationResult = regularExp.test(value.trim());
 
-export const onlyMixOfAlphaNumeric = (value) => {
-  const regularExp = /^([0-9]+[a-zA-Z]+|[a-zA-Z]+[0-9]+)[0-9a-zA-Z]*$/;
+//   return validationResult;
+// };
 
-  const validationResult = regularExp.test(value.trim());
+// export const onlyNumbers = (value) => {
+//   const regularExp = /^[0-9]+$/;
 
-  return validationResult;
-};
+//   const validationResult = regularExp.test(value.trim());
 
-export const containsAlphaNumeric = (value) => {
-  const regularExp = /^(?!-)(?!.*-)[A-Za-z0-9-]+(?<!-)$/;
+//   return validationResult;
+// };
 
-  const validationResult = regularExp.test(value.trim());
+// export const onlyMixOfAlphaNumeric = (value) => {
+//   const regularExp = /^([0-9]+[a-zA-Z]+|[a-zA-Z]+[0-9]+)[0-9a-zA-Z]*$/;
 
-  return validationResult;
-};
+//   const validationResult = regularExp.test(value.trim());
 
-export const containsNumber = (value) => {
-  const regularExp = /\d+/;
+//   return validationResult;
+// };
 
-  const validationResult = regularExp.test(value.trim());
+// export const containsAlphaNumeric = (value) => {
+//   const regularExp = /^(?!-)(?!.*-)[A-Za-z0-9-]+(?<!-)$/;
 
-  return validationResult;
-};
+//   const validationResult = regularExp.test(value.trim());
 
-export const containsAlphabet = (value) => {
-  const regularExp = /[a-zA-Z]/;
+//   return validationResult;
+// };
 
-  const validationResult = regularExp.test(value.trim());
+// export const containsNumber = (value) => {
+//   const regularExp = /\d+/;
 
-  return validationResult;
-};
+//   const validationResult = regularExp.test(value.trim());
+
+//   return validationResult;
+// };
+
+// export const containsAlphabet = (value) => {
+//   const regularExp = /[a-zA-Z]/;
+
+//   const validationResult = regularExp.test(value.trim());
+
+//   return validationResult;
+// };
