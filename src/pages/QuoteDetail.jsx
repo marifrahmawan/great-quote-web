@@ -50,7 +50,7 @@ const QuoteDetail = () => {
           </Link>
         </div>
       </Route>
-      <Route path={`${match.url}/comments`}>
+      <Route path={`${match.path}/comments`}>
         <Comments />
       </Route>
     </>
